@@ -63,14 +63,14 @@ export default function Wisemind() {
         {/* <IconButton aria-label="share">
           <ShareIcon />
         </IconButton> */}
-        <ExpandMore
+        {/* <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
           aria-label="show more"
         >
-          {/* <ExpandMoreIcon /> */}
-        </ExpandMore>
+          <ExpandMoreIcon />
+        </ExpandMore> */}
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
