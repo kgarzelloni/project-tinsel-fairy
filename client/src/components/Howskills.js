@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Wisemind() {
+export default function Howskills() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -38,7 +38,7 @@ export default function Wisemind() {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: purple[500] }} aria-label="skill">
-            WM
+            HS
           </Avatar>
         }
         // action={
@@ -46,14 +46,13 @@ export default function Wisemind() {
         //     <MoreVertIcon />
         //   </IconButton>
         // }
-        title="Wise Mind"
+        title="How Skills"
         subheader="Mindfullness"
       />
       <CardMedia component="img" height="194" image="" alt="" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Synthesis of reasonable and emotional mind. The middle path that
-          allows for intuition.
+         One-Mindfully, Non-Judgementally, Effectively
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -76,26 +75,36 @@ export default function Wisemind() {
         <CardContent>
           <Typography paragraph> Skill Detail:</Typography>
 
+          <Typography paragraph>One-Mindfully:</Typography>
           <Typography paragraph>
-            Wise Mind is the inner wisdom that each one of us has. When we
-            access our inner wisdom, we say we are in Wise Mind. When we enter
-            the state of Wise Mind, we integrate opposites— including our
-            reasonable and emotional states of mind—and we are open to
-            experiencing reality as it is.
+     One-mindfully is the skill of doing one thing at a time. It is the opposite of mult-tasking. If you are eating, eat. Be mindfull about it without reading or watching TV. If you are working, work. Try to focus only on one task at a time without worrying about something else at the same time. When you are having a conversation, fully engage with that person without being on your phone at the same time. This brings quality awareness to what we are doing and experiencing, being in the here and now. 
           </Typography>
 
-          <Typography paragraph> Idea for practicing Wise Mind:</Typography>
-          
+          <Typography paragraph>Non-Judgementally:</Typography>
           <Typography paragraph>
-            Walking down the spiral stairs. Imagine that within you is a spiral
-            staircase, winding down to your very center. Starting at the top
-            walk very slowly down the staircase, going deeper and deeper within
-            yourself. Notice the sensations. Rest by sitting on a step, or turn
-            on lights on the way down if you wish. Do not force yourself further
-            than you want to go. Notice the quiet. As you reach the center of
-            your self, settle your attention there—perhaps in your gut or your
-            abdomen.
+           Non-judgementally is....
           </Typography>
+          <Typography paragraph>Effectively</Typography>
+          <Typography paragraph>
+            Effectively is...
+          </Typography>
+          <Typography paragraph> Practice How Skills:</Typography>
+
+          <Typography paragraph>
+            Watch for situations in your life when you are doing more than one task at the same time. Practice techniques for concentrating on one task at a time. Notice times that you are one-mindfully paying attention to just one thing, how does it feel?
+          </Typography>
+          <Typography paragraph>
+            When doing a mundane task, try observing and describing as you complete the task. Notice when your mind begins to make a judgement and let the judgement go. 
+          </Typography>
+          <Typography paragraph>
+            Are you holding onto a grudge in your life? Are you benefiting from holding this grudge? Reassess the situation and consider ways to find an effective solution. 
+          </Typography>
+          <Typography paragraph>
+            Keep a journal for a day or several days and record what you do and
+            how you feel on paper.
+          </Typography>
+          
+        
         </CardContent>
       </Collapse>
     </Card>
