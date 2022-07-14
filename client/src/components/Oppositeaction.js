@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import { styled } from "@mui/material/styles";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
@@ -26,7 +26,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function Wisemind() {
+export default function Oppositeaction() {
   const [expanded, setExpanded] = React.useState(false);
 
   const handleExpandClick = () => {
@@ -38,7 +38,7 @@ export default function Wisemind() {
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: purple[500] }} aria-label="skill">
-            WM
+            OA
           </Avatar>
         }
         // action={
@@ -46,14 +46,13 @@ export default function Wisemind() {
         //     <MoreVertIcon />
         //   </IconButton>
         // }
-        title="Wise Mind"
+        title="Opposite Action"
         subheader="Mindfullness"
       />
       <CardMedia component="img" height="194" image="" alt="" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Synthesis of reasonable and emotional mind. The middle path that
-          allows for intuition.
+         Describe Opposite Action
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
@@ -76,26 +75,20 @@ export default function Wisemind() {
         <CardContent>
           <Typography paragraph> Skill Detail:</Typography>
 
+          <Typography paragraph>Opposite Action:</Typography>
           <Typography paragraph>
-            Wise Mind is the inner wisdom that each one of us has. When we
-            access our inner wisdom, we say we are in Wise Mind. When we enter
-            the state of Wise Mind, we integrate opposites— including our
-            reasonable and emotional states of mind—and we are open to
-            experiencing reality as it is.
+            Opposite action is... 
           </Typography>
+         
+          <Typography paragraph> Practice Opposite Action Skills:</Typography>
 
-          <Typography paragraph> Idea for practicing Wise Mind:</Typography>
-          
           <Typography paragraph>
-            Walking down the spiral stairs. Imagine that within you is a spiral
-            staircase, winding down to your very center. Starting at the top
-            walk very slowly down the staircase, going deeper and deeper within
-            yourself. Notice the sensations. Rest by sitting on a step, or turn
-            on lights on the way down if you wish. Do not force yourself further
-            than you want to go. Notice the quiet. As you reach the center of
-            your self, settle your attention there—perhaps in your gut or your
-            abdomen.
+      
           </Typography>
+          <Typography paragraph>
+      
+          </Typography>
+     
         </CardContent>
       </Collapse>
     </Card>
