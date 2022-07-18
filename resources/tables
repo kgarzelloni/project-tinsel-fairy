@@ -1,0 +1,93 @@
+CREATE TABLE user_info (
+	user_id SERIAL PRIMARY KEY,
+	email VARCHAR(90) NOT NULL, 
+	password VARCHAR(30) NOT NULL
+);
+​
+CREATE TABLE dbt_diary_card_data (
+	diary_entry_id SERIAL PRIMARY KEY,
+	diary_entry_date DATE NOT NULL,
+	/*urges*/
+	use_urge INT,
+	su_urge INT,
+	sh_urge INT,
+	/*emotions*/
+	misery_emotion_rating INT,
+	anger_emotion_rating INT,
+	anxiety_emotion_rating INT,
+	abandonment_emotion_rating INT,
+	shame_emotion_rating INT, 
+	depression_emotion_rating INT,
+	sadness_emotion_rating INT,
+	joy_emotion_rating INT,
+	/*drugs and alcohol*/
+	number_of_drugs_and_medication INT,
+	number_alcohol_drinks INT,
+	type_of_alcohol_drinks VARCHAR(30),
+	meds_as_prescribed VARCHAR(1),
+	number_illicit_drugs INT,
+	type_of_illicit_drugs VARCHAR(30),
+	number_prn_or_otc_meds INT,
+	type_of_prn_or_otc_meds VARCHAR(30),
+	/*action*/
+	sh_action VARCHAR(1),
+	number_of_lies_action VARCHAR(1),
+	used_skills_rating_action int
+	/*notes*/
+	notes VARCHAR(250)
+);
+​
+CREATE TABLE dbt_skills_card_data(
+	wise_mind VARCHAR(1),
+	observe VARCHAR(1),
+	describe VARCHAR(1),
+	participate VARCHAR(1),
+	nonjudgemental_stance VARCHAR(1),,
+	one_mindfully  VARCHAR(1),
+	effectiveness VARCHAR(1),
+	objective_effectiveness VARCHAR(1),
+	relationship_effectiveness  VARCHAR(1),
+	self_respect_effectiveness  VARCHAR(1),
+	reduce_vulnerability VARCHAR(1),
+	build_mastery VARCHAR(1),
+	build_positive_experiences VARCHAR(1),
+	opposite_to_emtion_action VARCHAR(1),
+	distract VARCHAR(1),
+	self_soothe VARCHAR(1),
+	improve_the_moment VARCHAR(1),
+	pros_and_cons VARCHAR(1),
+	radical_acceptance VARCHAR(1),
+	building_structure_work VARCHAR(1),
+	building_structure_love VARCHAR(1),
+	building_structure_time VARCHAR(1),
+	building_structure_place VARCHAR(1),
+);
+​
+/*use = drug use*/
+/*su = suicide ideation*/
+/*sh = self harm*/
+/*prn = taking meds as needed, i.e. Xanax when feeling need to relax*/
+/*used skills ratings:
+	0 = Not thought about or used
+	1 = Thought about, not used, didn't want to
+	2 = Thought about, not used, wanted to
+	3 = Tried but couldn't use them
+	4 = Tried, could do them but they didn't help
+	5 = Tried, could use them, helped
+	6 = Didn't try, used them, didn't help
+	7 = didn't try, used them, helped*/
+	
+/* Found example DBT cards from 3 sources to base data schema on:
+https://www.youtube.com/watch?v=lwHdQnBSvA8
+https://dbtselfhelp.com/dbt-skills-list/miscellaneous/diary-cards/ 
+https://www.youtube.com/watch?v=d6iVckYkA9Y
+*/
+​
+/*should emotions be entered manually by patient, depending on what they need to track?*/
+​
+​
+​
+INSERT INTO user_logins (username, pw)
+VALUES ('tinselfairy', 'Security!123');
+​
+SELECT * FROM user_logins;
