@@ -3,8 +3,8 @@ CREATE TABLE user_info (
 	email VARCHAR(90) NOT NULL, 
 	password VARCHAR(30) NOT NULL
 );
-​
-CREATE TABLE dbt_diary_card_data (
+
+CREATE TABLE dbt_diary_data (
 	diary_entry_id SERIAL PRIMARY KEY,
 	diary_entry_date DATE NOT NULL,
 	/*urges*/
@@ -32,37 +32,86 @@ CREATE TABLE dbt_diary_card_data (
 	/*action*/
 	sh_action VARCHAR(1),
 	number_of_lies_action VARCHAR(1),
-	used_skills_rating_action int
+	used_skills_rating_action int,
 	/*notes*/
 	notes VARCHAR(250)
 );
-​
-CREATE TABLE dbt_skills_card_data(
-	wise_mind VARCHAR(1),
+
+CREATE TABLE dbt_skills_ratings_data(
+	/*mindfulness*/
 	observe VARCHAR(1),
 	describe VARCHAR(1),
 	participate VARCHAR(1),
-	nonjudgemental_stance VARCHAR(1),,
-	one_mindfully  VARCHAR(1),
-	effectiveness VARCHAR(1),
-	objective_effectiveness VARCHAR(1),
-	relationship_effectiveness  VARCHAR(1),
-	self_respect_effectiveness  VARCHAR(1),
-	reduce_vulnerability VARCHAR(1),
+	non_judgemental VARCHAR(1),
+	one_mindful VARCHAR(1),
+	effective VARCHAR(1),
+	/*emotion regulation*/
+	reduce_vulnerabilities VARCHAR(1),
 	build_mastery VARCHAR(1),
 	build_positive_experiences VARCHAR(1),
-	opposite_to_emtion_action VARCHAR(1),
+	allow_emotions VARCHAR(1),
+	opposite_action VARCHAR(1),
+	check_the_facts VARCHAR(1),
+	cope_ahead VARCHAR(1),
+	problem_solve VARCHAR(1),
+	self_validation VARCHAR(1),
+	/*distress tolerance*/
 	distract VARCHAR(1),
 	self_soothe VARCHAR(1),
+	urge_surf VARCHAR(1),
+	half_smile VARCHAR(1),
 	improve_the_moment VARCHAR(1),
 	pros_and_cons VARCHAR(1),
 	radical_acceptance VARCHAR(1),
-	building_structure_work VARCHAR(1),
-	building_structure_love VARCHAR(1),
-	building_structure_time VARCHAR(1),
-	building_structure_place VARCHAR(1),
+	tipp VARCHAR(1),
+	/*interpersonal effectiveness*/
+	relationship_mindfulness VARCHAR(1),
+	accurate_expression VARCHAR(1),
+	dear_man VARCHAR(1),
+	give VARCHAR(1),
+	fast VARCHAR(1)
 );
-​
+
+CREATE TABLE mindfulness_descriptions(
+	observe VARCHAR(150),
+	describe VARCHAR(150),
+	participate VARCHAR(150),
+	non_judgemental VARCHAR(150),
+	one_mindful VARCHAR(150),
+	effective VARCHAR(150)
+);
+
+CREATE TABLE emotion_regulation_descriptions(
+	reduce_vulnerabilities VARCHAR(150),
+	build_mastery VARCHAR(150),
+	build_positive_experiences VARCHAR(150),
+	allow_emotions VARCHAR(150),
+	opposite_action VARCHAR(150),
+	check_the_facts VARCHAR(150),
+	cope_ahead VARCHAR(150),
+	problem_solve VARCHAR(150),
+	self_validation VARCHAR(150)
+);
+
+CREATE TABLE distress_tolerance_descriptions(
+	distract VARCHAR(150),
+	self_soothe VARCHAR(150),
+	urge_surf VARCHAR(150),
+	half_smile VARCHAR(150),
+	improve_the_moment VARCHAR(150),
+	pros_and_cons VARCHAR(150),
+	radical_acceptance VARCHAR(150),
+	tipp VARCHAR(150)
+);
+
+CREATE TABLE interpersonal_effectiveness_descriptions(
+	relationship_mindfulness VARCHAR(1),
+	accurate_expression VARCHAR(1),
+	dear_man VARCHAR(1),
+	give VARCHAR(1),
+	fast VARCHAR(1)
+);
+
 /*use = drug use*/
 /*su = suicide ideation*/
 /*sh = self harm*/
@@ -82,12 +131,10 @@ https://www.youtube.com/watch?v=lwHdQnBSvA8
 https://dbtselfhelp.com/dbt-skills-list/miscellaneous/diary-cards/ 
 https://www.youtube.com/watch?v=d6iVckYkA9Y
 */
-​
-/*should emotions be entered manually by patient, depending on what they need to track?*/
-​
-​
-​
+
 INSERT INTO user_logins (username, pw)
 VALUES ('tinselfairy', 'Security!123');
-​
+
+DROP TABLE user_logins;
+
 SELECT * FROM user_logins;
